@@ -18,10 +18,11 @@ The architecture of this project follows the Medallion Architecture:
 ## Setup Instructions
 1. **Create S3 Bucket**: Set up an S3 bucket on AWS to store the data.
 2. **IAM User Configuration**: Create an IAM user with appropriate permissions to access the S3 bucket.
-3. **Mount S3 Bucket in Databricks**: Use the IAM user credentials to mount the S3 bucket in Databricks.
+3. **Mount S3 Bucket in Databricks**: Use the IAM user credentials to mount the S3 bucket in Databricks.When we mount an S3 bucket in Databricks, it create a logical link between the S3 bucket and a mount point within our Databricks file system. This allows us to access the files in the S3 bucket using standard 
+file system commands directly from Databricks.
 4. **Data Loading**: Load the raw data into Databricks and save it as Delta tables in the bronze layer.
-5. **Data Transformation**: Transform the data as required and save it as Delta tables in the silver layer.
-6. **Further Processing (Optional)**: Perform additional processing and save the data in the gold layer.
+5. **Data Transformation**: Transform the data using Pyspark and SparkSql as required and save it as Delta tables in the silver layer.After that combine all the tables to form OBT(One Big table).
+6. **Further Processing (Optional)**: Perform additional processing and save the data in the gold layer as OBT
 
 ## Usage
 1. **Data Analysis**: Access the data stored in the gold layer for further analysis using various services or tools like PowerBI or Tableau.
