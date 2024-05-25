@@ -24,7 +24,7 @@ The architecture of this project follows the Medallion Architecture:
 6. **Further Processing (Optional)**: Perform additional processing and save the data in the gold layer.
 
 ## Usage
-1. **Data Analysis**: Access the data stored in the gold layer for further analysis using various services or tools.
+1. **Data Analysis**: Access the data stored in the gold layer for further analysis using various services or tools like PowerBI or Tableau.
 
 ## Contributing
 Contributions to improve this project are welcome. Please fork the repository and submit pull requests with your proposed changes.
