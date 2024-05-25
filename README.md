@@ -22,7 +22,7 @@ The architecture of this project follows the Medallion Architecture:
 file system commands directly from Databricks.
 4. **Data Loading**: Load the raw data into Databricks and save it as Delta tables in the bronze layer.
 5. **Data Transformation**: Transform the data using Pyspark and SparkSql as required and save it as Delta tables in the silver layer.After that combine all the tables to form OBT(One Big table).
-6. **Further Processing (Optional)**: Perform additional processing and save the data in the gold layer as OBT
+6. **Further Processing**: Perform additional processing and save the data in the gold layer as OBT which can be used for Analysis.
 
 ## Usage
 1. **Data Analysis**: Access the data stored in the gold layer for further analysis using various services or tools like PowerBI or Tableau.
