@@ -1,35 +1,48 @@
 # Ecommerce Data Transformation using Databricks
 
-## Overview
-This project focuses on transforming ecommerce data using Databricks, leveraging AWS S3 for storage and Delta Lake for efficient data processing. The data transformation follows the Medallion Architecture, moving data through different layers (bronze, silver, gold) for various levels of processing and analysis.
+# AWS S3 Integration with Databricks for Delta Lake Transformation
+
+## Project Overview
+
+This project demonstrates the integration of AWS S3 with Databricks to transform and store data using Delta Lake capabilities. The data is processed and stored as Delta tables, following the Medallion architecture which includes Bronze, Silver, and Gold layers. This approach ensures scalable, efficient, and reliable data processing.
+
+## Features
+
+- **AWS S3 Integration**: Mounting an AWS S3 bucket on Databricks for easy access to raw data.
+- **Data Transformation**: Using PySpark and Spark SQL to clean and transform the data.
+- **Delta Lake Storage**: Storing transformed data as Delta tables for efficient querying and data management.
+- **Medallion Architecture**: Implementing a multi-layer data architecture:
+  - **Bronze Layer**: Raw data ingestion.
+  - **Silver Layer**: Cleaned and enriched data.
+  - **Gold Layer**: Aggregated and refined data ready for analysis.
 
 ## Architecture
-The architecture of this project follows the Medallion Architecture:
 
-1. **Bronze Layer**: Raw data is ingested and stored as Delta tables in the bronze layer.
-2. **Silver Layer**: Data is transformed and cleaned as per requirements and stored in Delta tables in the silver layer.
-3. **Gold Layer**: Further processing may occur, and the data is stored in Delta tables in the gold layer for analysis.
+### Medallion Architecture
+
+1. **Bronze Layer**:
+   - Raw data is ingested from the S3 bucket and stored in its original form.
+   
+2. **Silver Layer**:
+   - Data from the Bronze layer is cleaned, transformed, and stored in a more structured format.
+   
+3. **Gold Layer**:
+   - Refined data from the Silver layer is further aggregated and stored for high-performance queries and analytics.
 
 ## Technologies Used
-- Databricks
-- AWS S3
-- Delta Lake
 
-## Setup Instructions
-1. **Create S3 Bucket**: Set up an S3 bucket on AWS to store the data.
-2. **IAM User Configuration**: Create an IAM user with appropriate permissions to access the S3 bucket.
-3. **Mount S3 Bucket in Databricks**: Use the IAM user credentials to mount the S3 bucket in Databricks.When we mount an S3 bucket in Databricks, it create a logical link between the S3 bucket and a mount point within our Databricks file system. This allows us to access the files in the S3 bucket using standard 
-file system commands directly from Databricks.
-4. **Data Loading**: Load the raw data into Databricks and save it as Delta tables in the bronze layer.
-5. **Data Transformation**: Transform the data using Pyspark and SparkSql as required and save it as Delta tables in the silver layer.After that combine all the tables to form OBT(One Big table).
-6. **Further Processing**: Perform additional processing and save the data in the gold layer as OBT which can be used for Analysis.
+- **Databricks**: Unified analytics platform for big data processing and machine learning.
+- **AWS S3**: Scalable object storage for data lakes.
+- **Delta Lake**: Storage layer that brings reliability to data lakes.
+- **PySpark**: Python API for Spark, enabling big data processing.
+- **Spark SQL**: SQL module for querying structured data within Spark.
 
-## Usage
-1. **Data Analysis**: Access the data stored in the gold layer for further analysis using various services or tools like PowerBI or Tableau.
+## Getting Started
 
-## Contributing
-Contributions to improve this project are welcome. Please fork the repository and submit pull requests with your proposed changes.
+### Prerequisites
 
+- Databricks account 
+- AWS account with access to S3
 
 ## Acknowledgements
 - [Databricks](https://databricks.com/)
