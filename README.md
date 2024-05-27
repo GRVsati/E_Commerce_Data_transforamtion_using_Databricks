@@ -1,7 +1,5 @@
 # Ecommerce Data Transformation using Databricks
 
-# AWS S3 Integration with Databricks for Delta Lake Transformation
-
 ## Project Overview
 
 This project demonstrates the integration of AWS S3 with Databricks to transform and store data using Delta Lake capabilities. The data is processed and stored as Delta tables, following the Medallion architecture which includes Bronze, Silver, and Gold layers. This approach ensures scalable, efficient, and reliable data processing.
