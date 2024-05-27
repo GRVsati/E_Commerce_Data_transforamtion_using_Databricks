@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project demonstrates the integration of AWS S3 with Databricks to transform and store data using Delta Lake capabilities. The data is processed and stored as Delta tables, following the Medallion architecture which includes Bronze, Silver, and Gold layers. This approach ensures scalable, efficient, and reliable data processing.
+This project demonstrates the integration of AWS S3 with Databricks to transform and store data as Delta tables using Delta Lake capabilities. The project involves mounting an S3 bucket on Databricks, transforming the data using PySpark and Spark SQL, and organizing the data following the Medallion architecture (Bronze, Silver, and Gold layers). This architecture ensures a scalable and efficient data processing workflow, providing clean and reliable data for analysis.
 
 ## Features
 
