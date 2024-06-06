@@ -19,13 +19,13 @@ This project demonstrates the integration of AWS S3 with Databricks to transform
 ### Medallion Architecture
 
 1. **Bronze Layer**:
-   - Raw data is ingested from the S3 bucket and stored in its original form.
+   - Raw data is ingested from the S3 bucket and stored in its original form and save them as delta tables.
    
 2. **Silver Layer**:
-   - Data from the Bronze layer is cleaned, transformed, and stored in a more structured format.
+   - Saved delta tables from the Bronze layer are first load, cleaned, transformed, and stored in a more structured format as delta tables in Silver layer.
    
 3. **Gold Layer**:
-   - Refined data from the Silver layer is further aggregated and stored for high-performance queries and analytics.
+   - Refined delta tables from the Silver layer is further aggregated and joined as One Big Table and stored for high-performance queries and analytics.
 
 ## Technologies Used
 
